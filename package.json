@@ -10,5 +10,9 @@
     "crud"
   ],
   "author": "Daser David",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "lodash": "^4.17.4"
+  }
 }
