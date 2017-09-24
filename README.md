@@ -1,8 +1,5 @@
 # crudpluginModified
 
-
-Rather than taking a mongodb collection as target, CRUD will take a mongoose model plus the JSON payload and will execute 
-In summary,  this plugging will be the main source or entry point of all CRUD requests?
 WHAT: This project is a Plugin that can help manage all CRUD operations by taking a mongoose model plus the JSON payload and will execute the desired action i.e. C, R, U or D.
 
 WHY: This plugin is aimed at freeing other services (in a microservice architecture) which leverage CRUD to define their data models and route handlers which will internally leverage CRUD functionality.
