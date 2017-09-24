@@ -1,14 +1,28 @@
 # crudpluginModified
 
 
-Rather than taking a mongodb collection as target, CRUD will take a mongoose model plus the JSON payload and will execute the desired action i.e. C, R, U or D...
-
-This will free other services which leverage CRUD to define their data models and route handlers which will internally leverage CRUD functionality.
-
+Rather than taking a mongodb collection as target, CRUD will take a mongoose model plus the JSON payload and will execute 
 In summary,  this plugging will be the main source or entry point of all CRUD requests?
+WHAT: This project is a Plugin that can help manage all CRUD operations by taking a mongoose model plus the JSON payload and will execute the desired action i.e. C, R, U or D.
 
+WHY: This plugin is aimed at freeing other services (in a microservice architecture) which leverage CRUD to define their data models and route handlers which will internally leverage CRUD functionality.
 
-To install the plugin into your project:
+HOW: The plugin exposes all the functions which provide CRUD implementation on data models.
+
+## Requirements
+* NodeJS
+
+## Setup
+* clone Repository containing the project using `git clone git@github.com:daser/crudpluginModified.git`
+* cd into the newly created crudpluginModified directory
+* Run `npm install` to install the needed node js packages.
+
+## How to run
+Run this command to run the application `NODE_ENV=development node server.js`
+
+## Docomentation
+
+To install the plugin into your project from npm:
 
 
 ```npm install crudplugin --save```
@@ -25,12 +39,12 @@ Method: create
 </b>
 
 ```
- 	crud.create(User, req.body.record)
-    .then(record=>{
-        return res.status(200).json(record.email);
-    }).catch(err => {
-        return res.status(500).json("A little error");
-    })
+crud.create(User, req.body.record)
+.then(record=>{
+   return res.status(200).json(record.email);
+}).catch(err => {
+  return res.status(500).json("A little error");
+})
 ```
 
 <b>
@@ -129,3 +143,9 @@ This updates a single field in the model given some matching criteria.
 property and value parameters works as previously seen, based on the matching criteria, we we changing "firstname" to "Abiodun".
 
 Note the difference between: updateRecords and updateRecord (one is plural while the other is singular)
+
+
+
+## Contributors
+[Daser David](https://github.com/daser)
+
